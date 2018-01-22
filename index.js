@@ -53,8 +53,9 @@ bot.on("message", async message => {
   if(command == '!new') {
     let embed = new Discord.RichEmbed()
     .setColor("#3259B6")
-    .addField('Full Username', `${message.author.username}#${message.author.discriminator}`)
-    .addField("Member Count", message.guild.memberCount)
+    .addField('Guild Name', message.guild.name)
+    .addField("Guild Member Count", message.guild.memberCount)
+    .addField("Default role", message.guild.defaultRole)
 
     message.channel.sendEmbed(embed);
   }
