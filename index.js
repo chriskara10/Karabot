@@ -56,6 +56,7 @@ bot.on("message", async message => {
     .addField('Guild Name', message.guild.name)
     .addField("Guild Member Count", message.guild.memberCount)
     .addField("Default role", message.guild.defaultRole)
+    .addField("AuditLogsTarget", message.AuditLogTargetType)
 
     message.channel.sendEmbed(embed);
   }
